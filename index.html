@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <div id="main">
+    <h1>Kite Aim Trainer</h1>
+    <div id="hint">Click the target</div>
+  </div>
+  <div id="game-arena">
+    <div class="target" id="kite-enemy"></div>
+    <div class="circle" id="kite-circle"></div>
+    <div id="dots">
+    </div>
+  </div>
+
+  <div id="panel">
+    <div id="stats">
+      <h3>Stats</h3>
+      <div class="stat">
+        <label>Accuracy</label>
+        <div id="stat-accuracy"></div>
+      </div>
+      <div class="stat">
+        <label>Good CPS</label>
+        <div id="stat-cps"></div>
+      </div>
+      <div class="stat">
+        <label>Time</label>
+        <div id="stat-time"></div>
+      </div>
+      <button id="reset-stats">Reset</button>
+    </div>
+    <div id="settings">
+      <h3>Settings</h3>
+      <div class="input">
+        <label for="enemy-size">Target Size</label>
+        <span><input type="number" min="20" data-change="enemySize" id="enemy-size" value="75">px</span>
+      </div>
+      <div class="input">
+        <label for="kite-radius">Kite Radius</label>
+        <span><input type="number" min="50" data-change="kiteRadius" id="kite-radius" value="350">px</span>
+      </div>
+      <div class="input">
+        <label for="kite-tolerance">Kite Tolerance</label>
+        <span><input type="number" min="10" data-change="kiteTolerance" id="kite-tolerance" value="50">px</span>
+      </div>
+    </div>
+  </div>
+  <footer>By <a href="//twitter.com/preyneyv">@preyneyv</a></footer>
+</body>
+
+</html>

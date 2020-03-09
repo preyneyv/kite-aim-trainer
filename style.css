@@ -1,0 +1,154 @@
+body {
+  background: rgb(40, 42, 43);
+  overflow: hidden;
+  color: white;
+  font-family: sans-serif;
+}
+
+#kite-enemy {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  /* border: 8px solid rgba(0,0,0,0.2); */
+  background: rgb(179, 21, 68);
+  opacity: 0.4;
+}
+
+#kite-circle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  border: 50px solid rgba(179, 21, 68);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.highlight {
+  opacity: 1 !important;
+}
+
+
+#game-arena {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(50vw, 50vh);
+}
+
+/* Panel */
+#panel {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.2);
+  padding: 20px;
+}
+#panel h3 {
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+
+/* Control Inputs */
+#settings .input:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+#settings .input label {
+  font-size: 12px;
+  opacity: 0.4;
+  display: block;
+}
+
+#settings .input input {
+  background: rgba(255,255,255,0.1);
+  border: 0;
+  font: inherit;
+  width: 120px;
+  color: white;
+  margin-top: 2px;
+  font-size: 24px;
+  margin-right: 4px;
+}
+#settings .input span {
+  color: rgba(255,255,255,0.3);
+}
+
+/* Stats Panel */
+#stats {
+  margin-bottom: 24px;
+}
+
+#stats .stat:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+#stats .stat label {
+  font-size: 12px;
+  opacity: 0.4;
+  display: block;
+}
+
+#stats .stat div {
+  font-size: 24px;
+}
+
+
+
+/* Click Dots */
+@keyframes fadeOut {
+  to {opacity: 0;}
+}
+
+.dot {
+  position: fixed;
+  z-index: 10;
+  width: 8px;
+  height: 8px;
+  background: white;
+  opacity: 0.4;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeOut 2s forwards;
+}
+
+/* Main/Hint styles */
+#main {
+  padding: 16px;
+}
+#main h1 {
+  font-size: 40px;
+  margin: 0;
+}
+#hint {
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0.2;
+}
+
+
+body.playing #main h1 {
+  opacity: 0.2;
+}
+
+footer {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  opacity: 0.2;
+}
+
+a[href] {
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+  color: inherit;
+}
